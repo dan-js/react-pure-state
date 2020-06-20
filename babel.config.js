@@ -1,16 +1,4 @@
 /* eslint-env node */
+const { react } = require("@nuuji/config");
 
-const isTest = process.env.NODE_ENV === "test";
-
-module.exports = {
-    presets: [
-        [
-            "@babel/env",
-            {
-                modules: isTest ? "commonjs" : false,
-            },
-        ],
-        "@babel/preset-react",
-    ],
-    plugins: ["@babel/plugin-proposal-class-properties"],
-};
+module.exports = react.babel();
