@@ -18,7 +18,7 @@ export default (selector = defaultSelector) => {
         const handler = () => {
             const stringifiedMemo = stringify(selectedState);
 
-            if (lastStringValue.current !== stringifiedMemo) {
+            if (lastStringValue !== stringifiedMemo) {
                 setLastStringValue(stringifiedMemo);
             }
 

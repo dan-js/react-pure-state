@@ -1,7 +1,9 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 
-import { StateProvider, useRps, useEffectObj } from "..";
+import { StateProvider, useRps } from "..";
+
+import useEffectObj from "../hooks/useEffectObj";
 
 describe("Firing side effects when state updates", () => {
     it("fires useEffect when subscribed state changes", async () => {
